@@ -1,18 +1,30 @@
 #!/bin/bash
 
-cargo add tokio
-cargo add color-eyre
-cargo add tracing
-cargo add reqwest
-cargo add rayon
-cargo add aws-sdk-rust
-cargo add clap
-cargo add sqlx
-cargo add chrono
-cargo add egui
-cargo add yew
-cargo clippy --fix -- \
+cargo clippy --fix --allow-dirty -- \
 -W clippy::pedantic \
 -W clippy::nursery \
 -W clippy::unwrap_used \
--W clippy::expect_used
+-W clippy::expect_used &
+wait $!
+
+cargo add tokio &
+wait $!
+cargo add color-eyre &
+wait $!
+cargo add tracing &
+wait $!
+cargo add reqwest &
+wait $!
+cargo add rayon &
+wait $!
+cargo add aws-sdk-rust &
+wait $!
+cargo add clap &
+wait $!
+cargo add sqlx &
+wait $!
+cargo add chrono &
+wait $!
+cargo add egui &
+wait $!
+cargo add yew
