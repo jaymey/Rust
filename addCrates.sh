@@ -17,8 +17,6 @@ cargo add reqwest &
 wait $!
 cargo add rayon &
 wait $!
-cargo add aws-sdk-rust &
-wait $!
 cargo add clap &
 wait $!
 cargo add sqlx &
